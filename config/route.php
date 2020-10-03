@@ -37,11 +37,14 @@ class Routing {
                 break;  
         	
         	default:
-        		die('<h1>NO SUCH METHOD</h1>');
+        		View::render(ERROR_PAGE, 'Страница не найдена!');
+        		die();
         }
 
         require_once CONTROLLER_PATH . $controllerName . ".php";
-        require_once MODEL_PATH . $modelName . ".php";
+
+        if (file_exists(MODEL_PATH . $modelName . ".php"))
+            require_once MODEL_PATH . $modelName . ".php";
 
         $controller = new $controllerName();
         $controller->$action();

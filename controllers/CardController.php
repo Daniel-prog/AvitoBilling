@@ -15,7 +15,7 @@ class CardController extends Controller {
         if (isset($_SESSION['startTime']) && (time() - $_SESSION['startTime'] > 1800)) {
             session_unset();
             session_destroy();
-            $this->view->render($this->errorTpl, 'Время сессии истекло! Отправьте запрос снова.');
+            $this->view->render(ERROR_PAGE, 'Время сессии истекло! Отправьте запрос снова.');
             die();
         }
 
@@ -32,7 +32,7 @@ class CardController extends Controller {
         }
     		
     	else {
-            $this->view->render($this->errorTpl, 'Некорректный ID сессии! Возможно, вы уже совершили оплату.');
+            $this->view->render(ERROR_PAGE, 'Некорректный ID сессии! Возможно, вы уже совершили оплату.');
     		die();
         }
 
@@ -44,7 +44,7 @@ class CardController extends Controller {
         if (isset($_SESSION['startTime']) && (time() - $_SESSION['startTime'] > 1800)) {
             session_unset();
             session_destroy();
-            $this->view->render($this->errorTpl, 'Время сессии истекло! Отправьте запрос снова.');
+            $this->view->render(ERROR_PAGE, 'Время сессии истекло! Отправьте запрос снова.');
             die();
         }
 
@@ -69,15 +69,15 @@ class CardController extends Controller {
 
             if (($sum % 10) === 0) {
                 $this->model->insert($_POST['name'], $_SESSION['payData']['amount'], $_SESSION['payData']['paymentPurpose']);
-                $this->view->render($this->successTpl);
+                $this->view->render(SUCCESS_PAGE);
                 session_unset();
                 session_destroy();
             } else {
-                $this->view->render($this->errorTpl, 'Введены некорректные данные!', true);
+                $this->view->render(ERROR_PAGE, 'Введены некорректные данные!', true);
             }
 
         } else {
-            $this->view->render($this->errorTpl, 'Введены некорректные данные!', true);
+            $this->view->render(ERROR_PAGE, 'Введены некорректные данные!', true);
         }
     }
 }

@@ -31,16 +31,16 @@ class RegisterController extends Controller {
 			if (mb_strlen(htmlentities(trim($decode->paymentPurpose))) <= 200) {
 				$_SESSION['payData']['paymentPurpose'] = htmlentities(trim($decode->paymentPurpose));
 			} else { 
-				$this->view->render($this->errorTpl, "Переданы некорректные данные!");
-				die(); 
+//				$this->view->render(ERROR_PAGE, "Переданы некорректные данные!");
+				die("Переданы некорректные данные!");
 			}
 
 			//При успехе выдаём ссылку с ID сессии
 			echo "http://localhost" . PAYMENTS_URL . "cards/form?sessionId=" . session_id();
 
 		} else { 
-			$this->view->render($this->errorTpl, "Переданы некорректные данные!");
-			die(); 
+//			$this->view->render(ERROR_PAGE, "Переданы некорректные данные!");
+			die("Переданы некорректные данные!");
 		}
 	}
 }
