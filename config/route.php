@@ -37,7 +37,8 @@ class Routing {
                 break;  
         	
         	default:
-        		View::render(ERROR_PAGE, 'Страница не найдена!');
+        	    $error = new View();
+        		$error->render(ERROR_PAGE, 'Страница не найдена!');
         		die();
         }
 

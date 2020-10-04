@@ -15,7 +15,11 @@ class DB {
         $host = self::HOST;
         $db = self::DB;
 
-        $connect = new PDO("mysql:host=$host;dbname=$db;charset=UTF8", $user, $pass);
+        try {
+            $connect = new PDO("mysql:host=$host;dbname=$db;charset=UTF8", $user, $pass);
+        } catch (PDOException $exception) {
+            echo "Ошибка подключения к базе данных: " . $exception->getMessage();
+        }
         return $connect;
     }
 }
