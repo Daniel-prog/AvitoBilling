@@ -2,7 +2,7 @@
 
 class CardController extends Controller {
 
-    private $pageTpl = '/avito/views/card.tpl.php';
+    private $pageTpl = '/views/card.tpl.php';
 
 	public function __construct() {
         $this->model = new CardModel();

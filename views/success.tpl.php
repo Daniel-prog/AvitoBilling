@@ -28,7 +28,7 @@
 </head>
 <body>
 	<main>
-		<img src="/avito/assets/img/success.png" alt="Success" height="250px" width="250px">
+		<img src="/assets/img/success.png" alt="Success" height="250px" width="250px">
 		<h1>Оплата прошла успешно!</h1>
 	</main>
 </body>

@@ -4,8 +4,8 @@
 
 class DB {
     const USER = 'root';
-    const PASS = '';
-    const HOST = 'localhost';
+    const PASS = 'root';
+    const HOST = 'db';
     const DB = 'avito';
 
     public static function db_connect() {

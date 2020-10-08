@@ -28,7 +28,7 @@
 </head>
 <body>
 	<main>
-		<img src="/avito/assets/img/error.png" alt="Error" height="250px" width="250px">
+		<img src="/assets/img/error.png" alt="Error" height="250px" width="250px">
 		<h1><?=$errorText; ?></h1>
     <?php if($button) { ?>
     <input type="button" onclick="history.back();" value="Назад"/>

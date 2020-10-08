@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
   
-      <link rel="stylesheet" href="/avito/assets/css/style.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -60,7 +60,7 @@ Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
 
-<script src="/avito/assets/js/index.js"></script>
+<script src="/assets/js/index.js"></script>
 
 </body>
 </html>

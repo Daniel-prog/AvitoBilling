@@ -29,7 +29,6 @@ class Routing {
                 $action = 'checkCard';
                 break;
 
-
             case PAYMENTS_URL . 'cards/form':
                 $controllerName = 'CardController';
                 $modelName = 'CardModel';

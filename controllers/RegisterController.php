@@ -15,7 +15,7 @@ class RegisterController extends Controller {
 
 		session_start();
 
-		//Значение, используемое в CardController, удаляем для корректной работы удаления сессии в зависимости от времени
+		//Значение, используемое в CardController. Удаляем для корректной работы удаления сессии в зависимости от времени
 		if (isset($_SESSION['count']))
 			unset($_SESSION['count']);
 
