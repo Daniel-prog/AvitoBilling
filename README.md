@@ -21,6 +21,6 @@ amount - сумма платежа, paymentPurpose - назначение пла
 должны быть в формате YYYY-MM-DD HH:MM:SS. Проверяется рег. выражением.
 
 5) Проект собирается через docker-compose. Настроенные php+apache и mysql тянутся из моего репозитория
-Docker Hub (danielprog/).
+Docker Hub (danielprog/). (Можно проверить зайдя на localhost/testForm.html, напрямую на localhost страницы нет).
 
 6) Тесты в процессе
